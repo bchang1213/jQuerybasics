@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Functions</title>
+	<link rel="stylesheet" type="text/css" href="jQuerybasics.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript">
+	// !!!!Document ready!!!!
+		$(document).ready(function(){
+			// CLICK FUNCTION
+			$('#click h2').click(function(){
+				alert("This is how the click function works.");
+			});
+			// HIDE FUNCTION
+			$('.hider').click(function(){
+				$('#hideandshow img').hide("slow");
+			});
+			$('.shower').click(function(){
+				$('#hideandshow img').show("fast");
+			});
+			//TOGGLE FUNCTION
+			$('.toggler').click(function(){
+				$('.char,.char2').toggle();
+			});
+			//SLIDE DOWN FUNCTION
+			$('.slidedowner').click(function(){
+				if( $(".mewtwo").is(":hidden")){
+					$( ".mewtwo" ).slideDown();
+				}
+				else{
+					$( ".mewtwo" ).hide();
+				}
+			});
+			//SLIDE UP FUNCTION
+			$('.slideupper').click(function(){
+  				if ( $( ".mew" ).is( ":hidden" ) ) {
+    				$( ".mew" ).show( "slow" );
+  				}
+  				else {
+    				$( ".mew" ).slideUp();
+  				}
+  			});
+  			//SLIDE TOGGLE FUNCTION
+  			$( ".slidetoggler" ).click(function() {
+  				$( ".abra" ).slideToggle( "slow" );
+			});
+			//FADE IN AND OUT FUNCTION
+			$(".fadeinner").click(function() {
+  				$( ".kadabra" ).fadeIn( "slow" );
+			});
+			$( ".fadeouter" ).click(function() {
+  				$( ".kadabra" ).fadeOut( "slow" );
+			});
+			//addClass FUNCTION
+			$(".addclasser").click(function() {
+  				$( "#addclass p" ).addClass( "smeargle" );
+			});
+			//.BEFORE FUNCTION
+			$( ".gloom" ).before( "<p>Oddish</p>" );
+			$(".gloom").after("<p>Vileplume</p>");
+			//.APPEND FUNCTION
+			$( "#append p" ).append( "<strong> Pokemon.</strong>" );
+			//.HTML FUNCTION
+			$( ".adiv" ).click(function() {
+  				var htmldiv = $( this ).html();
+  				$( this ).text( htmldiv );
+			});
+			//.ATTR FUNCTION
+			var nameofpokemon = $( "#attr img" ).attr( "#attr img alt" );
+			$( "p" ).text( nameofpokemon );
+			//.VAL FUNCTION
+			$( "button" ).click(function() {
+  				var text = $( this ).text();
+  				$( "input" ).val( text );
+			});
+			//.TEXT FUNCTION
+			var str = $( "#text p" ).text();
+			$( "#text p:last" ).html( str );
+			//.DATA FUNCTION
+			$( "#data p" ).data( "bulbaevos", { first: " Ivysaur", last: " Venusaur" } );
+			$( "#data p span:first" ).text( $( "#data p" ).data( "bulbaevos" ).first );
+			$( "#data p span:last" ).text( $( "#data p" ).data( "bulbaevos" ).last );
+
+
+
+
+		});
+	</script>
+</head>
+
+
+<body>
+	<header>
+		<h1>Assignment: jQuery Functions</h1>
+	</header>
+	<main>
+<!-- 	//.click function -->
+		<div id="click">
+			<h2>.click</h2>
+		</div>
+
+<!-- 	//.hide and .show function -->
+		<div id="hideandshow">
+			<button class="hider">.hide</button>
+			<button class="shower">.show</button>
+			<img src="http://40.media.tumblr.com/9abb159d27a81a0b7d522573ce7a7767/tumblr_nl3pkpRYKx1unlgoso6_400.jpg" alt="charizard">
+		</div>
+
+<!-- 	//.toggle function -->
+		<div id="toggle">
+			<button class="toggler">.toggle</button>
+			<img class="char" src="https://pldh.net/media/pokemon/ken_sugimori/original/004.png" alt="charmander">
+			<img class="char2" src="https://i.pinimg.com/originals/2e/f1/9d/2ef19dfedd63fb88b3a2769feb066521.png" alt="charmeleon">
+		</div>
+
+<!-- 	//.slideDown and .slideUp function -->
+		<div id="slidedownup">
+			<button class="slidedowner">.slideDown</button>
+			<img src="https://www.pidgi.net/wiki/images/8/83/Mewtwo_-_Pokemon_Red_and_Blue.png" alt="mewtwo" class="mewtwo">
+			<button class="slideupper">.slideUp</button>
+			<img src="http://i.imgur.com/Gam7rVj.png" class="mew">
+		</div>
+
+<!-- 	//.slideToggle -->
+		<div id="slidetoggle">
+			<button class="slidetoggler">.slideToggle</button>
+			<img src="https://pldh.net/media/pokemon/ken_sugimori/update1/063.png" alt="abra" class="abra">
+		</div>
+
+<!-- 	//.fadeIn and .fadeOut function -->
+		<div id="fadeinout">
+			<button class="fadeinner">.fadeIn</button>
+			<button class="fadeouter">.fadeOut</button>
+			<img src="https://cdn.bulbagarden.net/upload/thumb/4/4d/064Kadabra_RG.png/300px-064Kadabra_RG.png" alt="kadabra" class="kadabra">
+		</div>
+
+<!-- 	//.addClass function -->
+		<div id="addclass">
+			<button class="addclasser">.addClass</button>
+			<img src="http://68.media.tumblr.com/tumblr_lcbu50vQrZ1qdfa5lo1_250.png" alt="smeargle">
+			<p>Smeargle paints things green.</p>
+		</div>
+
+<!-- 	//.before and .after function -->
+		<div id="beforeafter">
+			<h3>.before and .after evolutions in action</h3>
+			<img src="https://pldh.net/media/pokemon/ken_sugimori/update1/044.png" class="gloom" alt="gloom">
+		</div>
+
+<!-- 	//.append function -->
+		<div id="append">
+			<h2>.append</h2>
+			<p>Welcome to the world of:</p>
+		</div>
+
+<!-- 	//.html function -->
+		<div id="html">
+			<h2>.html get by clicking white box</h2>
+			<div class="adiv">
+				<p>a</p>
+			</div>
+		</div>
+
+<!-- 	//.attr function -->
+		<div id="attr">
+			<h2>.attr</h2>
+			<img src="https://pldh.net/media/pokemon/ken_sugimori/update1/108.png" alt="lickitung">
+			<p></p>
+		</div>
+
+<!-- 	//.val function -->
+		<div id="value">
+			<h2>.val</h2>
+			<button>Bulbasaur</button>
+			<button>Charmander</button>
+			<button>Squirtle</button>
+			<input type="text" value="Click a Pokemon">
+		</div>
+
+<!-- 	//.text function -->
+		<div id="text">
+			<h2>.text</h2>
+			<p><span>Wartortle</span></p>
+			<h3>there should be a copy of "Wartortle" below:</h3>
+			<p></p>
+
+		</div>
+
+<!-- 	//.data function -->
+		<div id="data">
+			<h2>.data</h2>
+			<p>
+				Bulbasaur evolves into:
+				<span></span>
+				and then
+				<span></span>
+			</p>
+		</div>
+
+	</main>
+</body>
+</html>

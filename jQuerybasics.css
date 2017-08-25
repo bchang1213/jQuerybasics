@@ -1,0 +1,103 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+main{
+	width: 1000px;
+}
+main div{
+	padding: 10px 10px 10px 10px;
+}
+
+#click{
+	background-color: #042029;
+	color: white;
+}
+
+#hideandshow{
+	background-color: #809900;
+}
+
+#toggle{
+	background-color: #FF4B5E;
+}
+
+#toggle img{
+	width: 200px;
+	height: 200px;
+}
+
+.char2{
+	display:none;
+}
+
+#slidedownup{
+	background-color: #9C91B8;
+}
+
+.mewtwo{
+	width: 200px;
+	height: 200px;
+	display: none;
+}
+
+.mew{
+	display: none;
+}
+
+#slidetoggle{
+	background-color: #76635E;
+}
+
+#fadeinout{
+	background-color: #FFE578;
+}
+
+.kadabra{
+	display: none;
+}
+
+#addclass{
+	background-color: #E8E8CB;
+}
+
+.smeargle{
+	background-color: #70BA55
+}
+
+#beforeafter{
+	background-color: #2D6486;
+}
+
+.gloom{
+	background-color: #A7645A;
+	width: 100px;
+	height:100px;
+	padding: 20px;
+}
+
+#html{
+	background-color: #EF5F34;
+}
+#html h2, #html div{
+	display: inline-block;
+}
+
+#html div{
+	width: 100px;
+	height: 100px;
+	background-color: white;
+}
+
+#text{
+	background-color: #C9EDF4;
+}
+
+#text p span{
+	color: #5D82D1;
+}
+
+#data{
+	background-color: #89C3AA;
+}
